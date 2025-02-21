@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<main>
+		<section id="product">
+			<div class="image">
+				<img src="https://s3-alpha-sig.figma.com/img/0d36/171c/14b95ab56656af06d7a69ab2d9ee44d0?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=E3Vw9EEyhT40fAz3DE8qh1XQcJ6vliJ-TiKK5~vk-kdesPxZ9wDCnCr71Y~OoTTb61Z7LW~F2Fny2cWedUos7T5lWCY0PJJJsuaXF34CFmiyJilv8Gi6OtknW1yMyqrBu8lA2FFV02h64xY6NlPBYiik-UQUjmIUOf~bz0ivhQKXRnujjE1Otzno9XfFF-uN3MTFthITpaaZg4nSd9y5zgSL5XBO1D04agBv7y3wGPt2kPeNh4OGWWrG8RI2~F2iBQNv1oyW-VxOtIc4cqjz6wJZcFaErRD32hSEoTokyC-7k2cNqWEkS7gOYd~U8AKpE~IzsGuuMhuH-DYwoO6a6g__" alt="description de l'image">
+			</div>
+			<div class="text">
+				<h2>Nom du produit</h2>
+				<p class="price">24,99Euro</p>
+				<div class="description">
+					<h3>Description</h3>
+					<p>Description du produit</p>
+				</div>
+				<a href="{{ path('app_orders_add', {'id': 1}) }}">Ajouter au panier</a>
+			</div>
+		</section>
+	</main>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <section id="shopping">
+        <h2>
+            Mon panier
+        </h2>
+        <div class="container">
+            <a href="#" class="cancel">
+                x Vider le pannier
+            </a>
+            <div class="list">
+                <figure>
+                    <img src="https://s3-alpha-sig.figma.com/img/78e3/e660/0f07c28090abf9ac0d263bf4473ba9a6?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ooe61FJZeYF4-n6ELQWiWL9S-hxwOmc0WRhrLwHuxI2Fx-w052Gv6hbeSq60ZdBoXtChWPJwHjCPkL0So~goZHc-7uW6HTgpa6C0VrFqF-dVWeI0lW3N7vB4EHhO4theSIu58OjOhvA3dSiq2Fparnnwi0zMZJHQEeYFv6AInuX6ykQD6GfWsnMuaD3HMAguVyDpDe9WejN4wSc9vDj8aOwDv2WyrrO4qaC~0f2zZGIErbkJEBA4l41OyZZFB1lUyFbD3ZCOtACVYRGadb3-QhALF5aMK75wvaEcV1PfdqMQBXYdf3V1J2KBqsdJjWUs0INTTepe~v6v4a5hE-YXLg__" alt="Kit d'hygiène recyclable ">
+                        <figcaption>
+                            <h3>
+                                Kit d'hygiène recyclable
+                            </h3>
+                            <p class="quantity">
+                                Quantité :
+                                1
+                            </p>
+                            <p class="price">
+                                24,99 euro
+                            </p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="total">
+                    <div class="text">
+                        <h3>
+                            Total panier :
+                            <span>
+                                24,99 Euro
+                            </span>
+                        </h3>
+                        <p>
+                            Frais de livraison : Offert
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <a href="{{ path('app_orders_add', {'price': 10 }) }}" class="valid">
+                Valider la commande
+            </a>
+        </section>
+    </section>
+{% endblock %}

@@ -1,0 +1,109 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+	<section	id="welcome">
+		<div	class="text">
+			<div	class="container">
+				<h2>
+					Bienvenue
+				</h2>
+				<p>
+					Découvrez notre univers de produits durables et éthiques pour une consommation responsable
+				</p>
+				<p>
+					Retrouvez des articles d’hygiène & beauté, des accessoires & boissons et du prêt à porter
+				</p>
+			</div>
+		</div>
+		<div	class="image">
+			<img	src="https://s3-alpha-sig.figma.com/img/2380/6407/3a3a712d46724dda6860b8292c735c02?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=l~EcjILKwCy0FtQBzkAKMCEQ1NaSIkYz~cTKndvH4hT3mcdrpSh0VhoRbVDxmKE61a9fYvuy8XbJ2Mj9zEyXQmk6ViyYASWy61Gj1oLpyp4RSgg6hTEQsVIXB8qhecUHPMADWr0z2PD5xTKkHxllI63Pq0RUB54tfEtpkOWNcJvrMCLeI68QLv5elaPYB4G9zcw3Dg9kNp1Ttf4jdNmxPBsMqYmMW24PjczFqKxdVO6X6pAiaoj2uL0eMTO5LnTfi5ytA0akbUkot5ZYhbIBoIYtWBEWKsybkUM-mlOzb15X03XrrRA8ZFoSCpjnQ0RhOyvY78fV3b632F1ViUC4Fg__"	alt="Pancarte en carton avec marqué 'LESS_LESS NEW-CO2' posée sur une chaise."></div>
+		</section>
+		<section	id="products">
+			<div	class="title">
+				<h2>
+					NOS PRODUITS
+				</h2>
+			</div>
+			<div	class="container">
+				<figure>
+					<img	src="https://s3-alpha-sig.figma.com/img/78e3/e660/0f07c28090abf9ac0d263bf4473ba9a6?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ooe61FJZeYF4-n6ELQWiWL9S-hxwOmc0WRhrLwHuxI2Fx-w052Gv6hbeSq60ZdBoXtChWPJwHjCPkL0So~goZHc-7uW6HTgpa6C0VrFqF-dVWeI0lW3N7vB4EHhO4theSIu58OjOhvA3dSiq2Fparnnwi0zMZJHQEeYFv6AInuX6ykQD6GfWsnMuaD3HMAguVyDpDe9WejN4wSc9vDj8aOwDv2WyrrO4qaC~0f2zZGIErbkJEBA4l41OyZZFB1lUyFbD3ZCOtACVYRGadb3-QhALF5aMK75wvaEcV1PfdqMQBXYdf3V1J2KBqsdJjWUs0INTTepe~v6v4a5hE-YXLg__"	alt="Kit d'hygiène recyclable">
+						<figcaption>
+							<h3>
+								Kit d'hygiène recyclable
+							</h3>
+							<p	class="description">
+								Pour une salle de bain éco-friendly
+							</p>
+							<p	class="price">
+								24,99
+							</p>
+							<a	href="{{ path('app_one_product', {'id': 1 }) }}">
+								Voir le produit
+							</a>
+						</figcaption>
+					</figure>
+					<figure>
+						<img	src="https://s3-alpha-sig.figma.com/img/0d36/171c/14b95ab56656af06d7a69ab2d9ee44d0?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=E3Vw9EEyhT40fAz3DE8qh1XQcJ6vliJ-TiKK5~vk-kdesPxZ9wDCnCr71Y~OoTTb61Z7LW~F2Fny2cWedUos7T5lWCY0PJJJsuaXF34CFmiyJilv8Gi6OtknW1yMyqrBu8lA2FFV02h64xY6NlPBYiik-UQUjmIUOf~bz0ivhQKXRnujjE1Otzno9XfFF-uN3MTFthITpaaZg4nSd9y5zgSL5XBO1D04agBv7y3wGPt2kPeNh4OGWWrG8RI2~F2iBQNv1oyW-VxOtIc4cqjz6wJZcFaErRD32hSEoTokyC-7k2cNqWEkS7gOYd~U8AKpE~IzsGuuMhuH-DYwoO6a6g__"	alt="Shot Tropical">
+							<figcaption>
+								<h3>
+									Shot Tropical
+								</h3>
+								<p	class="description">
+									Fruits frais, pressés à froid
+								</p>
+								<p	class="price">
+									24,99
+								</p>
+								<a	href="{{ path('app_one_product', {'id': 1 }) }}">
+									Voir le produit
+								</a>
+							</figcaption>
+						</figure>
+						<figure>
+							<img	src="https://s3-alpha-sig.figma.com/img/0d36/171c/14b95ab56656af06d7a69ab2d9ee44d0?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=E3Vw9EEyhT40fAz3DE8qh1XQcJ6vliJ-TiKK5~vk-kdesPxZ9wDCnCr71Y~OoTTb61Z7LW~F2Fny2cWedUos7T5lWCY0PJJJsuaXF34CFmiyJilv8Gi6OtknW1yMyqrBu8lA2FFV02h64xY6NlPBYiik-UQUjmIUOf~bz0ivhQKXRnujjE1Otzno9XfFF-uN3MTFthITpaaZg4nSd9y5zgSL5XBO1D04agBv7y3wGPt2kPeNh4OGWWrG8RI2~F2iBQNv1oyW-VxOtIc4cqjz6wJZcFaErRD32hSEoTokyC-7k2cNqWEkS7gOYd~U8AKpE~IzsGuuMhuH-DYwoO6a6g__"	alt="Shot Tropical">
+								<figcaption>
+									<h3>
+										Shot Tropical
+									</h3>
+									<p	class="description">
+										Fruits frais, pressés à froid
+									</p>
+									<p	class="price">
+										24,99
+									</p>
+									<a	href="{{ path('app_one_product', {'id': 1 }) }}">
+										Voir le produit
+									</a>
+								</figcaption>
+							</figure>
+						</div>
+					</section>
+					<section	id="about">
+						<div>
+							<h2>
+								NOTRE CONVICTION
+							</h2>
+							<p>
+								Chez GreenGoodies, nous croyons en un monde où le commerce peut être synonyme de bien-être pour la planète et ses habitants. Notre mission est de vous proposer une sélection rigoureuse de produits qui allient qualité, durabilité et éthique
+							</p>
+						</div>
+						<div></div>
+						<div>
+							<img	src="https://s3-alpha-sig.figma.com/img/bdc7/64f5/3d56d2aa94c157b36fcfc7d9f2db7fa3?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=tq2kTKZOBQCbKcxRViXkZVHNLpprEy-gVIpp-XKJ2vxtHvD6Lp1cfh9kyGJfGXtQuoyOLz8Dj4obRkAfg5tJQVIV3RJO7q~ivwwtsoE7y4KoCQP9h0o28vUDxvi9c6qyzsNPZa4dpfjYGA38eqOL5~0WLx5juoE1pvV7iCywxJ5r8TZNY5XRUDDn~9FZklsTgY5V2zrP9QDOLa8JVqovxGBnLHfGd8JMlkslcb9JqhkFKzZcvJVV5LUJWUdViDg2C3lVAB~wwlc3vvSeTaEpkIn~Il24iSb8x5-vq0qGS7oTpHK0CwB~Cbey~6vELXW9QdEEwmYs~4~Ck6sgwcP35A__"	alt=""></div>
+							<div>
+								<img	src="https://s3-alpha-sig.figma.com/img/195e/0013/f44e47b56a531865bb61be5625328910?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=gAxEwMyh-RxDSU-1epgVSGzFzaC5UktfG83yU3ZCdM~RS92111afiDNO4RNv4lPfyqs9VFQHl1dkc2LcK1mS9G20bNfv9VCqszYUbNGr54wximLNIufkEGO5Jcd-CtZzMlwY4K9KcwyxEPe3C0V2RPoZM4fDKwbxurcHb4CQznjtVkP5thoTiWgFK4exhQPEWlkj9ktDJtkS90q~~yMsTsLpNwojUx8RGxhZ16PBkoymP~bjyJ~1Hgzm3LLkB7kCwY2YFyu0REdfOt6n-Iw6sU0mpKTApy6gYMlV1-D-oCBRXEF5XzSraHyF5LC0-xCI3mSZeroWjS82NMbiIX7Ajg__"	alt=""></div>
+								<div></div>
+								<div>
+									<h2>
+										NOS VALEURS
+									</h2>
+									<p>
+										Durabilité : Nous sélectionnons soigneusement des produits qui respectent l'environnement et favorisent la durabilité.
+										<br>
+											Éthique : Nous nous engageons à travailler avec des partenaires et des fournisseurs qui partagent nos valeurs éthiques.
+											<br>
+												Écologie : Nous encourageons des pratiques respectueuses de l'écosystème et privilégions les matériaux écologiques.
+											</p>
+										</div>
+									</section>
+								{% endblock %}
+								

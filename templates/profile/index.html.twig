@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+	<section id="account">
+		<h2>Mon compte</h2>
+		<div class="container">
+			<h3>Mes commandes</h3>
+			<table>
+				<thead>
+					<tr>
+						<th scope="col">N°</th>
+						<th scope="col">Date</th>
+						<th scope="col">Prix</th>
+					</tr>
+				</thead>
+				<tbody>
+					
+						<tr>
+							<td>1</td>
+                            <td>01/01/2025 </td>
+							<td>30,00€</td>
+						</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="apiAccess">
+			<h3>Mon accès API</h3>
+			<a href="">
+			
+				Activer/Supprimer
+			</a>
+		</div>
+
+		<div class="apiAccess">
+			<a href="">Supprimer mon compte</a>
+		</div>
+	</section>
+
+{% endblock %}

@@ -1,0 +1,24 @@
+<header>
+	<nav>
+		<div class="logo">
+			<h1>Green Goodies</h1>
+			<img src="{{ asset('images/Logo.svg') }}" alt="Green Goodies">
+		</div>
+		<ul>
+			<li>
+				<a href="{{ path('app_products') }}#products">Nos produits</a>
+			</li>
+			<li>
+				<a href="{{ app.user ? path('app_cart_show') : path('app_login') }}">Mon panier</a>
+			</li>
+			<li>
+				<a href="{{ app.user ? path('app_profile') : path('app_login') }}">Mon compte</a>
+			</li>
+			<li>
+				<a href="{{ app.user ? path('app_logout') : path('app_login') }}">
+					{{ app.user ? 'Déconnexion' : 'Connexion' }}
+				</a>
+			</li>
+		</ul>
+	</nav>
+</header>

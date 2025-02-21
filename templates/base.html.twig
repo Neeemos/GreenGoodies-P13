@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>
+			{% block title %}Green Goodies
+			{% endblock %}
+		</title>
+		<link rel="stylesheet" href="{{ asset('css/style.css') }}"> {% block stylesheets %}{% endblock %}
+		</head>
+		<body>
+			{% include "layouts/navbar.html.twig" %}
+			<main>
+				{% block body %}{% endblock %}
+			</main>
+
+			{% include "layouts/footer.html.twig" %}
+		</body>
+	</html>

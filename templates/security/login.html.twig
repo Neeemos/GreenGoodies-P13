@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Log in!
+{% endblock %}
+
+{% block body %}
+    <main>
+        <section id="auth">
+            <div class="image">
+                <img class="heightLogin" src="https://s3-alpha-sig.figma.com/img/bdc7/64f5/3d56d2aa94c157b36fcfc7d9f2db7fa3?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=tq2kTKZOBQCbKcxRViXkZVHNLpprEy-gVIpp-XKJ2vxtHvD6Lp1cfh9kyGJfGXtQuoyOLz8Dj4obRkAfg5tJQVIV3RJO7q~ivwwtsoE7y4KoCQP9h0o28vUDxvi9c6qyzsNPZa4dpfjYGA38eqOL5~0WLx5juoE1pvV7iCywxJ5r8TZNY5XRUDDn~9FZklsTgY5V2zrP9QDOLa8JVqovxGBnLHfGd8JMlkslcb9JqhkFKzZcvJVV5LUJWUdViDg2C3lVAB~wwlc3vvSeTaEpkIn~Il24iSb8x5-vq0qGS7oTpHK0CwB~Cbey~6vELXW9QdEEwmYs~4~Ck6sgwcP35A__" alt="description de l'image"></div>
+                <div class="form">
+                    <h2>
+                        Connexion
+                    </h2>
+                    <form method="post">
+                        {% if error %}
+                            <div class="alert alert-danger">
+                                {{ error.messageKey|trans(error.messageData, 'security') }}
+                            </div>
+                        {% endif %}
+
+                        {% if app.user %}
+                            <div class="mb-3">
+                                You are logged in as
+                                {{ app.user.userIdentifier }}
+                                ,
+                                <a href="{{ path('app_logout') }}">
+                                    Logout
+                                </a>
+                            </div>
+                        {% endif %}
+
+                        <h1 class="h3 mb-3 font-weight-normal">
+                            Please sign in
+                        </h1>
+                        <label for="inputEmail">
+                            Email
+                        </label>
+                        <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+                            <label for="inputPassword">
+                                Password
+                            </label>
+                            <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+
+                                <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+                                    <button class="btn btn-lg btn-primary" type="submit">
+                                        Sign in
+                                    </button>
+                                </form>
+                            </div>
+                        </section>
+                    </main>
+                {% endblock %}
+                
