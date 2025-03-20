@@ -1,40 +1,70 @@
 {% extends 'base.html.twig' %}
-
 {% block body %}
-
-	<section id="account">
-		<h2>Mon compte</h2>
-		<div class="container">
-			<h3>Mes commandes</h3>
+	{% for message in app.flashes('success') %}
+		<div	class="flash-success">
+			{{ message }}
+		</div>
+	{% endfor %}
+	<section	id="account">
+		<h2>
+			Mon compte
+		</h2>
+		<div	class="container">
+			<h3>
+				Mes commandes
+			</h3>
 			<table>
 				<thead>
 					<tr>
-						<th scope="col">N°</th>
-						<th scope="col">Date</th>
-						<th scope="col">Prix</th>
+						<th	scope="col">
+							N°
+						</th>
+						<th	scope="col">
+							Date
+						</th>
+						<th	scope="col">
+							Prix
+						</th>
 					</tr>
 				</thead>
 				<tbody>
-					
+					{% for order in orders %}
 						<tr>
-							<td>1</td>
-                            <td>01/01/2025 </td>
-							<td>30,00€</td>
+							<td>
+								{{ order.id }}
+							</td>
+							<td>
+								{{ order.date|date('d/m/Y') }}
+							</td>
+							<td>
+								{{ order.price }}
+								€
+							</td>
 						</tr>
+					{% endfor %}
 				</tbody>
 			</table>
 		</div>
-		<div class="apiAccess">
-			<h3>Mon accès API</h3>
-			<a href="">
-			
-				Activer/Supprimer
-			</a>
+		<div>
+			<h3>
+				Mon accès API
+			</h3>
+			<form	action="{{ path('app_profile_api') }}"	method="post">
+				<button	type="submit">
+					{% if 'ROLE_API' in app.user.roles %}
+						Désactiver l'accès API
+					{% else %}
+						Activer l'accès API
+					{% endif %}
+				</button>
+			</form>
 		</div>
-
-		<div class="apiAccess">
-			<a href="">Supprimer mon compte</a>
+		<div>
+			<form	action="{{ path('app_profile_delete') }}"	method="post"	onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer votre compte ?')">
+				<button	type="submit"	class="btn btn-danger">
+					Supprimer mon compte
+				</button>
+			</form>
 		</div>
 	</section>
-
 {% endblock %}

@@ -46,6 +46,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\OneToMany(targetEntity: Order::class, mappedBy: 'user_id')]
     private Collection $orders;
 
+    #[ORM\Column]
+    private ?bool $apiActive = false;
+
     public function __construct()
     {
         $this->orders = new ArrayCollection();
@@ -176,6 +179,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
                 $order->setUserId(null);
             }
         }
+
+        return $this;
+    }
+
+    public function isApiActive(): ?bool
+    {
+        return $this->apiActive;
+    }
+
+    public function setApiActive(bool $apiActive): static
+    {
+        $this->apiActive = $apiActive;
 
         return $this;
     }
