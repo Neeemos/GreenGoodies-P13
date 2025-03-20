@@ -14,27 +14,23 @@ final class ApiController extends AbstractController
 {
 
     #[Route('/api/login', name: 'api_login', methods: ['POST'])]
-    public function login(): Response
+    public function login(AuthenticationUtils $authenticationUtils): Response
     {
         $user = $this->getUser();
-    
+
         if (!$user) {
             return $this->json([
                 'message' => 'Identifiants invalides',
             ], Response::HTTP_UNAUTHORIZED);
         }
-    
-        return $this->json([
-            'user' => $user->getUserIdentifier(),
-            'roles' => $user->getRoles(),
-        ]);
     }
+
     #[Route('/api/products', name: 'api_products', methods: ['GET'])]
     #[IsGranted('ROLE_USER')]
     public function getProducts(ProductRepository $productRepository): Response
     {
         $products = $productRepository->findAll();
-    
+
         $data = [];
         foreach ($products as $product) {
             $data[] = [
@@ -44,7 +40,7 @@ final class ApiController extends AbstractController
                 'description' => $product->getDescription(),
             ];
         }
-    
+
         return $this->json($data);
     }
 }
