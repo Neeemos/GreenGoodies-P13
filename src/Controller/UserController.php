@@ -79,7 +79,8 @@ final class UserController extends AbstractController
         $user->setPassword(uniqid()); 
         $user->setName('Anonyme');
         $user->setSurname('Anonyme');
-
+        $user->setRoles(['ROLE_ANONYME']);
+        
         $entityManager->persist($user);
         $entityManager->flush();
 

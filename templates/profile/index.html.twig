@@ -51,7 +51,7 @@
 			</h3>
 			<form	action="{{ path('app_profile_api') }}"	method="post">
 				<button	type="submit">
-					{% if 'ROLE_API' in app.user.roles %}
+					{% if app.user.apiActive %}
 						Désactiver l'accès API
 					{% else %}
 						Activer l'accès API
