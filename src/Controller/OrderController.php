@@ -11,10 +11,12 @@ use App\Entity\Order;
 use App\Entity\OrderProduct;
 use App\Repository\ProductRepository;
 use DateTime;
+use Symfony\Component\Security\Http\Attribute\IsGranted;
 final class OrderController extends AbstractController
 {
 
     #[Route('/cart', name: 'app_cart_show')]
+    #[IsGranted('ROLE_USER')]
     public function showOrder(SessionInterface $session): Response
     {
         $cart = $session->get('cart', []);
