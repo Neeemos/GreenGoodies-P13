@@ -20,9 +20,9 @@ security:
                 check_path: /api/login
                 username_path: email
                 password_path: password
-                success_handler: lexik_jwt_authentication.handler.authentication_success
+                success_handler: App\Security\CustomAuthenticationSuccessHandler
                 failure_handler: lexik_jwt_authentication.handler.authentication_failure
-            jwt: ~  # Active l'authentification JWT pour cette firewall
+            jwt: ~
 
         main:
             lazy: true
@@ -38,8 +38,9 @@ security:
                 always_remember_me: true
 
     access_control:
-        - { path: ^/api/login, roles: PUBLIC_ACCESS }  # Autoriser l'accès à /api/login sans authentification
-        - { path: ^/api/products, roles: ROLE_USER }  # Protéger toutes les autres routes API
+        - { path: ^/api/login, roles: PUBLIC_ACCESS }
+        - { path: ^/api, roles: API_ACCESS }
+
 
 
 when@test:

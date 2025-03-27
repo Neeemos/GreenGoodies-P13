@@ -31,7 +31,7 @@ final class UserController extends AbstractController
         }
 
         $orders = $entityManager->getRepository(Order::class)->findBy([
-            'user_id' => $user
+            'user' => $user
         ]);
 
         return $this->render('profile/index.html.twig', [
@@ -80,6 +80,7 @@ final class UserController extends AbstractController
         $user->setName('Anonyme');
         $user->setSurname('Anonyme');
         $user->setRoles(['ROLE_ANONYME']);
+        $user->setApiActive(False);
         
         $entityManager->persist($user);
         $entityManager->flush();
