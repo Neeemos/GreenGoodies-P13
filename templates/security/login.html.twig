@@ -1,25 +1,22 @@
 {% extends 'base.html.twig' %}
-
 {% block title %}
     Log in!
 {% endblock %}
-
 {% block body %}
     <main>
         <section id="auth">
             <div class="image">
                 <img class="heightLogin" src="images/cherie.webp" alt="description de l'image"></div>
                 <div class="form">
-                {% if error %}
-                <div class="flash-error">
-                    {{ error.messageKey|trans(error.messageData, 'security') }}
-                </div>
-            {% endif %}
+                    {% if error %}
+                        <div class="flash-error">
+                            {{ error.messageKey|trans(error.messageData, 'security') }}
+                        </div>
+                    {% endif %}
                     <h2>
                         Connexion
                     </h2>
                     <form method="post">
-
                         {% if app.user %}
                             <div class="mb-3">
                                 You are logged in as
@@ -30,7 +27,6 @@
                                 </a>
                             </div>
                         {% endif %}
-
                         <h1 class="h3 mb-3 font-weight-normal">
                             Please sign in
                         </h1>
@@ -42,12 +38,15 @@
                                 Password
                             </label>
                             <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
-
                                 <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
-
                                     <button class="btn btn-lg btn-primary" type="submit">
                                         Sign in
                                     </button>
+                                    <div class="auth-link">
+                                        <a href="{{ path('app_register') }}">
+                                            Pas encore de compte ? S’inscrire
+                                        </a>
+                                    </div>
                                 </form>
                             </div>
                         </section>

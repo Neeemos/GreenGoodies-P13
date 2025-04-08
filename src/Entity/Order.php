@@ -91,7 +91,7 @@ class Order
     {
         if (!$this->product->contains($product)) {
             $this->product->add($product);
-            $product->setOrderId($this);
+            $product->setOrder($this);
         }
 
         return $this;
@@ -101,8 +101,8 @@ class Order
     {
         if ($this->product->removeElement($product)) {
             // set the owning side to null (unless already changed)
-            if ($product->getOrderId() === $this) {
-                $product->setOrderId(null);
+            if ($product->getOrder() === $this) {
+                $product->setOrder(null);
             }
         }
 

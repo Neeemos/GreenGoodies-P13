@@ -170,3 +170,10 @@ symfony serve -d
 
 ```
 
+## Minifier CSS
+
+- Minifier le css app.css et le mapper
+```bash
+php bin/console asset-map:compile
+
+```

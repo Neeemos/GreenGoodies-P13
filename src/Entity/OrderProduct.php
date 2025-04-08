@@ -29,12 +29,12 @@ class OrderProduct
         return $this->id;
     }
 
-    public function getOrderId(): ?Order
+    public function getOrder(): ?Order
     {
         return $this->order;
     }
 
-    public function setOrderId(?Order $order): static
+    public function setOrder(?Order $order): static
     {
         $this->order = $order;
 

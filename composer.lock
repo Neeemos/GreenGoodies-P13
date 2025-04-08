@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0313ee1cb4d567be0ca202a8632171b6",
+    "content-hash": "46b9ae4e9c0613728365d36f4ae79ac5",
     "packages": [
         {
             "name": "composer/semver",
@@ -2253,6 +2253,81 @@
             "time": "2024-09-11T13:17:53+00:00"
         },
         {
+            "name": "sensiolabs/minify-bundle",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sensiolabs/minify-bundle.git",
+                "reference": "5ac418ee93fbf11088d4f197a0f22371271d7416"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sensiolabs/minify-bundle/zipball/5ac418ee93fbf11088d4f197a0f22371271d7416",
+                "reference": "5ac418ee93fbf11088d4f197a0f22371271d7416",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2",
+                "psr/log": "^2|^3",
+                "symfony/filesystem": "^6.4|^7.0",
+                "symfony/http-client-contracts": "^3.5",
+                "symfony/process": "^6.4|^7.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^1.12",
+                "phpunit/phpunit": "^10.5",
+                "symfony/asset-mapper": "^6.4|^7.0",
+                "symfony/console": "^6.4|^7.0",
+                "symfony/framework-bundle": "^6.4|^7.0",
+                "symfony/http-client": "^6.4|^7.0",
+                "symfony/http-kernel": "^6.4|^7.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "thanks": {
+                    "url": "https://github.com/tdewolff/minify",
+                    "name": "tdewolff/minify"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sensiolabs\\MinifyBundle\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Simon André",
+                    "email": "smn.andre@gmail.com"
+                },
+                {
+                    "name": "SensioLabs",
+                    "homepage": "https://sensiolabs.com"
+                }
+            ],
+            "description": "Assets Minifier (CSS, JS) for Symfony & Minify integration in Asset Mapper",
+            "homepage": "https://github.com/sensiolabs/minify-bundle",
+            "keywords": [
+                "JS",
+                "asset-mapper",
+                "assets",
+                "compress",
+                "css",
+                "minifier",
+                "minify",
+                "symfony",
+                "uglify"
+            ],
+            "support": {
+                "issues": "https://github.com/sensiolabs/minify-bundle/issues",
+                "source": "https://github.com/sensiolabs/minify-bundle/tree/v1.0.0"
+            },
+            "time": "2024-12-29T17:53:03+00:00"
+        },
+        {
             "name": "symfony/asset",
             "version": "v7.2.0",
             "source": {
@@ -2323,16 +2398,16 @@
         },
         {
             "name": "symfony/asset-mapper",
-            "version": "v7.2.3",
+            "version": "v7.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/asset-mapper.git",
-                "reference": "d9a514cbaba040691d5b10afc20755590d2ac80a"
+                "reference": "6428e4b6d8cff9c5fe6f40ddbee4c9f6bfdaa0b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/asset-mapper/zipball/d9a514cbaba040691d5b10afc20755590d2ac80a",
-                "reference": "d9a514cbaba040691d5b10afc20755590d2ac80a",
+                "url": "https://api.github.com/repos/symfony/asset-mapper/zipball/6428e4b6d8cff9c5fe6f40ddbee4c9f6bfdaa0b8",
+                "reference": "6428e4b6d8cff9c5fe6f40ddbee4c9f6bfdaa0b8",
                 "shasum": ""
             },
             "require": {
@@ -2382,7 +2457,7 @@
             "description": "Maps directories of assets & makes them available in a public directory with versioned filenames.",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/asset-mapper/tree/v7.2.3"
+                "source": "https://github.com/symfony/asset-mapper/tree/v7.2.5"
             },
             "funding": [
                 {
@@ -2398,7 +2473,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-01-27T11:08:17+00:00"
+            "time": "2025-03-26T11:29:07+00:00"
         },
         {
             "name": "symfony/cache",

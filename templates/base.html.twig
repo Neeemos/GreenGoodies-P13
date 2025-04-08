@@ -7,8 +7,10 @@
 			{% block title %}Green Goodies
 			{% endblock %}
 		</title>
-		<link rel="stylesheet" href="{{ asset('css/style.css') }}"> {% block stylesheets %}{% endblock %}
-		</head>
+		{% block javascripts %}
+   {% block importmap %}{{ importmap('app') }}{% endblock %}
+{% endblock %}
+	</head>
 		<body>
 			{% include "layouts/navbar.html.twig" %}
 			<main>

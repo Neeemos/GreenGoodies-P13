@@ -47,7 +47,7 @@ class LoginAuthenticator extends AbstractLoginFormAuthenticator
 
                 if (in_array('ROLE_ANONYME', $user->getRoles())) {
                     throw new CustomUserMessageAuthenticationException(
-                        'Les utilisateurs anonymes ne peuvent pas se connecter.'
+                        'Identifiant invalide'
                     );
                 }
 

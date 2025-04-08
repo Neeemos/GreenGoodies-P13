@@ -68,7 +68,7 @@ final class OrderController extends AbstractController
             }
     
             $orderProduct = new OrderProduct();
-            $orderProduct->setOrderId($order); 
+            $orderProduct->setOrder($order); 
             $orderProduct->setProduct($productEntity); 
             $orderProduct->setQuantity($product['quantity']); 
 
